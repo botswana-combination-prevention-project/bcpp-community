@@ -1,1 +1,1 @@
-# bcpp-communities
+# bcpp-community

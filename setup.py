@@ -10,15 +10,15 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name='bcpp-communities',
+    name='bcpp-community',
     version='0.1.0',
     author=u'Erik van Widenfelt',
     author_email='ew2789@gmail.com',
     packages=find_packages(),
     include_package_data=True,
-    url='https://github.com/botswana-harvard/bcpp-communities',
+    url='https://github.com/botswana-harvard/bcpp-community',
     license='GPL license, see LICENSE',
-    description='bcpp communities',
+    description='bcpp communities and maps',
     long_description=README,
     zip_safe=False,
     keywords='bcpp communities',

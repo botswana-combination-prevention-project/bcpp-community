@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bcpp_communities.apps.AppConfig',
+    'edc_map.apps.AppConfig',
+    'bcpp_community.apps.AppConfig',
 ]
 
 MIDDLEWARE = [
