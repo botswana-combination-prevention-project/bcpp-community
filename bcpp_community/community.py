@@ -9,13 +9,12 @@ style = color_style()
 Community = namedtuple('Community', 'code name pair intervention')
 
 if 'test' in sys.argv:
-    communities = {'test_community': Community(
-        '01', 'test_community', 1, True),
-        'botswana': Community('00', 'botswana', 0, False),
+    communities = {
+        'test_community': Community('01', 'test_community', 1, True),
+        'test_community2': Community('02', 'test_community2', 1, False),
     }
 else:
     communities = {
-        'test_community': Community('99', 'test_community', 99, True),
         'botswana': Community('00', 'botswana', 0, False),
         'bokaa': Community('17', 'bokaa', 4, False),
         'digawana': Community('12', 'digawana', 1, True),
@@ -64,6 +63,6 @@ def is_intervention(community):
         return communities.get(community).intervention
     except AttributeError as e:
         sys.stdout.write(style.ERROR(
-            '\n * ERROR: Assuming \'{}\' is an intervention community. \n'
-            '   Got {}\n\n'.format(community, str(e))))
+            f'\n * ERROR: Assuming \'{community}\' is an intervention community. \n'
+            f'   Got {e}\n\n'))
         return True

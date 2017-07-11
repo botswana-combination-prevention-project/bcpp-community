@@ -3,7 +3,7 @@ from edc_map.site_mappers import site_mappers
 from edc_map.mapper import Mapper
 
 from .landmarks import (
-    TEST_LANDMARKS, METSIMOTLHABE_LANDMARKS,
+    METSIMOTLHABE_LANDMARKS,
     BOKAA_LANDMARKS, MMANKGODI_LANDMARKS, MASUNGA_LANDMARKS,
     MATHANGWANE_LANDMARKS, MAUNATLALA_LANDMARKS,
     MMADINARE_LANDMARKS, MMANDUNYANE_LANDMARKS,
@@ -48,24 +48,6 @@ class AnonymousMapper(Mapper):
 
 
 site_mappers.register(AnonymousMapper)
-
-
-class TestPlotMapper(Mapper):
-
-    map_area = 'test_community'
-    map_code = '01'
-    pair = 0
-    landmarks = TEST_LANDMARKS
-    center_lat = -24.557709
-    center_lon = 25.807963
-    clinic_lat = -24.645541
-    clinic_lon = 25.912407
-    radius = 100.5
-    location_boundary = ()
-    intervention = True
-
-
-site_mappers.register(TestPlotMapper)
 
 
 class BokaaPlotMapper(Mapper):
