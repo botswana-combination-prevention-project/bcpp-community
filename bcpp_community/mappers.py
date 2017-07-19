@@ -1,6 +1,6 @@
 from edc_map.site_mappers import site_mappers
 
-from edc_map.mapper import Mapper
+from edc_map.mapper import Mapper as MapperCls
 
 from .landmarks import (
     METSIMOTLHABE_LANDMARKS,
@@ -18,13 +18,15 @@ from .landmarks import (
     TATI_SIDING_LANDMARKS)
 
 
+class Mapper(MapperCls):
+    mapper_model = 'plot.plot'
+
+
 class BotswanaPlotMapper(Mapper):
 
     map_area = 'botswana'
     map_code = '00'
     pair = 0
-    regions = []
-    sections = []
     intervention = False
     landmarks = []
     center_lat = -22.543839
