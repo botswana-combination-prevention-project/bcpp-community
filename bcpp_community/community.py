@@ -3,12 +3,13 @@ import sys
 from collections import namedtuple
 
 from django.core.management.color import color_style
+from django.conf import settings
 
 style = color_style()
 
 Community = namedtuple('Community', 'code name pair intervention')
 
-if 'test' in sys.argv:
+if 'test' in sys.argv or settings.APP_NAME == 'bcpp_subject':
     communities = {
         'test_community': Community('01', 'test_community', 1, True),
         'test_community2': Community('02', 'test_community2', 1, False),
