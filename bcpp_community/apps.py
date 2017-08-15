@@ -4,6 +4,7 @@ from django.conf import settings
 
 class AppConfig(DjangoAppConfig):
     name = 'bcpp_community'
+    mapper_model = 'plot.plot'
 
 
 if settings.APP_NAME == 'bcpp_community':
