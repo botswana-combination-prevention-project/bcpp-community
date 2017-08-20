@@ -1,3 +1,5 @@
+from django.apps import apps as django_apps
+
 from edc_map.site_mappers import site_mappers
 
 from edc_map.mapper import Mapper as MapperCls
@@ -19,7 +21,21 @@ from .landmarks import (
 
 
 class Mapper(MapperCls):
-    mapper_model = 'plot.plot'
+    mapper_model = django_apps.get_app_config('bcpp_community').mapper_model
+
+
+class TestPlotMapper(Mapper):
+
+    map_area = 'test_community'
+    map_code = '01'
+    pair = 0
+    intervention = False
+    landmarks = []
+    center_lat = -24.655940
+    center_lon = 25.924361
+    radius = 10.0
+
+site_mappers.register(TestPlotMapper)
 
 
 class BotswanaPlotMapper(Mapper):
