@@ -53,6 +53,21 @@ class BotswanaPlotMapper(Mapper):
 site_mappers.register(BotswanaPlotMapper)
 
 
+class BotswanaClinicPlotMapper(Mapper):
+
+    map_area = 'botswana_clinic'
+    map_code = '02'
+    pair = 0
+    intervention = False
+    landmarks = []
+    center_lat = -22.543839
+    center_lon = 23.855027
+    radius = 900
+
+
+site_mappers.register(BotswanaClinicPlotMapper)
+
+
 class AnonymousMapper(Mapper):
 
     map_area = 'austin'
